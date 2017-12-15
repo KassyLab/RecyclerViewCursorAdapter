@@ -1,0 +1,75 @@
+/*
+ * Copyright (C) 2017  KassyLab
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.library'
+
+ext {
+    //For bintray and jcenter distribution
+    bintrayRepo = 'android'
+    bintrayName = 'RecyclerViewCursorAdapter'
+
+    publishedGroupId = 'com.kassylab'
+    libraryName = 'RecyclerViewCursorAdapter'
+    artifact = 'recyclerview-cursor-adapter' //This artifact name should be the same with library module name
+
+    libraryDescription = 'Simplified CursorAdapter designed for RecyclerView.'
+
+    siteUrl = 'https://github.com/KassyLab/RecyclerViewCursorAdapter'
+    gitUrl = 'https://github.com/KassyLab/RecyclerViewCursorAdapter.git'
+
+    libraryVersion = '26.1.3'
+
+    developerId = 'damien-danglard'
+    developerName = 'Damien Danglard'
+    developerEmail = 'damien.danglard@kassylab.com'
+
+    organization = 'kassylab' // if you push to organization's repository.
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+}
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+//These two remote files contain Bintray configuration as described above.
+apply from: 'https://raw.githubusercontent.com/KassyLab/template-files/master/android/gradle/install.gradle'
+apply from: 'https://raw.githubusercontent.com/KassyLab/template-files/master/android/gradle/bintray.gradle'
