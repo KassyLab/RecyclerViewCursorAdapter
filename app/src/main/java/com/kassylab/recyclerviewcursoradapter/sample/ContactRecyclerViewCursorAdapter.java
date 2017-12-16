@@ -42,12 +42,10 @@ public class ContactRecyclerViewCursorAdapter
 	
 	class ViewHolder extends RecyclerViewCursorAdapter.ViewHolder {
 		
-		//final TextView mIdView;
 		final TextView mContentView;
 		
 		ViewHolder(View view) {
 			super(view);
-			//mIdView = view.findViewById(R.id.id_text);
 			mContentView = view.findViewById(R.id.content);
 		}
 		
@@ -58,9 +56,6 @@ public class ContactRecyclerViewCursorAdapter
 		
 		protected void bind(Cursor cursor) {
 			int mIdColumn = cursor.getColumnIndex(ContactsContract.Contacts._ID);
-			/*if (mIdColumn != -1) {
-	            //mIdView.setText(cursor.getLong(mIdColumn) + "");
-            }*/
 			int mLookupKeyColumn = cursor.getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY);
 			int mDisplayNameColumn = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME_PRIMARY);
 			if (mDisplayNameColumn != -1) {
