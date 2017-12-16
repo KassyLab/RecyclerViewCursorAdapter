@@ -1,8 +1,8 @@
 # RecyclerViewCursorAdapter
 
-[ ![Download](https://api.bintray.com/packages/kassylab/android/RecyclerViewCursorAdapter/images/download.svg?version=26.1.3) ](https://bintray.com/kassylab/android/RecyclerViewCursorAdapter/26.1.3/link)
-
 Simplified CursorAdapter designed for RecyclerView.
+
+[ ![Download](https://api.bintray.com/packages/kassylab/android/RecyclerViewCursorAdapter/images/download.svg?version=26.1.3) ](https://bintray.com/kassylab/android/RecyclerViewCursorAdapter/26.1.3/link)
 
 ## Installation
 
