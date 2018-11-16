@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-include ':recyclerview-cursor-adapter', ':app'
+include ':recyclerview-cursor-adapter', ':sample'
